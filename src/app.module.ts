@@ -17,7 +17,7 @@ import { Users } from './users/users.entity';
       synchronize: true,
       logging: false,
       entities: [Users],
-      migrations: [],
+      migrations: ["../migrations/*.ts"],
       subscribers: [],  
     }),
     UsersModule    

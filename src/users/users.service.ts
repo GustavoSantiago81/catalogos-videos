@@ -11,10 +11,13 @@ export class UsersService {
     private usersRepository: Repository<Users>
     ) {}
 
-   async findAll(): Promise<Users[]> {
-     const users = await this.usersRepository.find();
-     return users;
-   }
+//    async findAll(): Promise<Users[]> {
+//      const users = await this.usersRepository.find();
+//      return users;
+//    }
+    async findAll(): Promise<Users[]> {
+        return this.usersRepository.find();
+    }
 
    async createUser(userDTO: UsersDTO): Promise<UsersDTO> {
      const createdUser = await this.usersRepository.save(userDTO);
